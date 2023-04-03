@@ -1,0 +1,13 @@
+<div class="row" 
+    [ngClass]="punteggio == (14 - i) ? 'corrente' : ''"
+    *ngFor="let premio of premi;let i = index ">
+    <div class="col-1 text-right">
+        {{ (14 - i) + 1 }}
+    </div>
+    <div class="col-1">
+        <span *ngIf="punteggio > (14 - i)">♦</span>
+    </div>
+    <div class="col-10 text-left" >
+        {{ premio }}
+    </div>
+</div>

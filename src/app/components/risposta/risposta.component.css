@@ -1,0 +1,9 @@
+.lampeggia{
+    animation:lampeggiamento 1s infinite;
+}
+@keyframes lampeggiamento{
+    0%{     background-color: white;    }
+    25%{ background-color: yellow; }
+    50%{ background-color: orange;}
+    75%{ background-color: yellow; }    
+}
