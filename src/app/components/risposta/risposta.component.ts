@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Risposta } from 'src/app/interfaces/risposta';
 
 @Component({
-  selector: 'app-risposta',
+  selector: 'app-risposta', 
   templateUrl: './risposta.component.html',
   styleUrls: ['./risposta.component.css']
 })
