@@ -1,11 +1,33 @@
-<div>
-    <app-punteggio [punteggio]="livello"></app-punteggio>
-</div>
-<div>
-    <app-domanda [domanda]="domanda" ></app-domanda>
-</div>
-<div>
-  <app-risposta *ngFor="let risp of domanda.risposte"
-    [risposta]="risp" (rispAccesa)="rispostaAccesa($event)" >
-  </app-risposta>
+<div class="main">
+
+  <div class="p-4">
+      <app-punteggio [punteggio]="livello"></app-punteggio>
+  </div>
+  
+  <app-aiutodacasa2 [domanda]="domanda" [lv]="livello" *ngIf="mostraCasa" ></app-aiutodacasa2>
+  <app-aiutopubblico2 [domanda]="domanda" [lv]="livello" *ngIf="mostraPubblico"></app-aiutopubblico2>
+  
+  <div class="row no-gutters"> 
+    
+    <div class="aiuti col-12">
+      <button (click)="aiuto5050()" [disabled]="giausato5050" >
+        50:50
+      </button>
+      <button (click)="aiutoPubblico()"  >
+        <i class="bi bi-people-fill"></i>
+      </button>
+      <button (click)="aiutoCasa()"  >
+        <i class="bi bi-house"></i>
+      </button>
+    </div>
+
+    <div class="col-12 p-2">
+        <hr>
+        <app-domanda [domanda]="domanda" ></app-domanda>
+    </div>
+    
+    <app-risposta *ngFor="let risp of domanda.risposte" class="col-6 p-2"
+      [risposta]="risp" (rispAccesa)="rispostaAccesa($event)" >
+    </app-risposta>
+  </div>
 </div>

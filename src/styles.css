@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css'; 
+
+:root{
+    --arancio:rgb(255,165,0); /* definisco una variabile*/ 
+    --bordo-bianco:2px solid white;
+    --coloro-sfondo:linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(60,9,121,1) 65%, rgba(30,86,188,1)100%);
+    --sfondo-bottoni:linear-gradient(90deg, rgb(5, 0, 98) 0%, rgba(30,86,188,1) 72%);
+    --raggio-bordi:15px;
+}
+hr{
+    border: var(--bordo-bianco);
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 120vw;
+    left:-10vw;
+    z-index: -1;
+}
+.punteggio{
+    border-radius: 30px;
+    border: var(--bordo-bianco);
+    background: radial-gradient(circle, rgba(0,32,36,1) 0%, rgba(30,70,188,1) 38%);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+body{
+    background:var(--coloro-sfondo);
+    color: white;
+}
+html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.risposta button, .domanda, .aiuti button{
+    color: white;
+    width: 100%;
+    border: var(--bordo-bianco);
+    background: var(--sfondo-bottoni);
+    border-radius: var(--raggio-bordi);
+    font-size: 1.3em;
+}
+.risposta button{
+    min-height: 50px;
+}
+
+.aiuti button{
+    width: 20%;
+    border-radius: 50px;
+}
+.aiuti{
+    display: flex;
+    justify-content: space-around;
+}
+.text-arancio{
+    color: var(--arancio); /* è come se avessi scritto rgb(255,165,0); */
+}
+.bg-arancio{
+    background-color: var(--arancio);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

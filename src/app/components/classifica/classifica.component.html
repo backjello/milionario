@@ -1,0 +1,15 @@
+<div matDialogTitle>Record</div>
+<div matDialogContent>
+    <div class="row no-gutters" *ngFor="let record of classifica;let i = index">
+        <div class="col-2">
+            {{ i+1 }} <!-- 1,2,3,4,5, ... --> 
+        </div>
+        <div class="col-5">
+            {{record.nome}} 
+        </div>
+        <div class="col-5">
+            {{record.punteggio}} 
+        </div>
+    </div>
+</div>
+<div matDialogActions></div>

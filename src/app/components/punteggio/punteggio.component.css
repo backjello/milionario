@@ -1,3 +1,4 @@
 .corrente{
     background-color: orange;
+    border-radius: var(--raggio-bordi);
 }
