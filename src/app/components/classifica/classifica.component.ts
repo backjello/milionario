@@ -24,11 +24,17 @@ export class ClassificaComponent implements OnInit {
       {nome:'c',punteggio:5000},
     ]
     data.punteggio = 30000
-    this.classifica.push({
+    const UTENTE = {
       nome:'NOME',
       punteggio:data.punteggio
-    })
+    }
+    this.classifica.push(UTENTE)
     this.classifica.sort((a,b)=> { return b.punteggio - a.punteggio } )
+    // togliamo l'ultimo elemento se ci sono più di 10 persone in classifica
+    if( this.classifica.length > 10 ){
+      this.classifica.pop() // this.classifica.splice(-1,1)
+    }
+
     console.log(this.classifica);
   }
 
