@@ -5,7 +5,6 @@
 .input-nome:focus{ /* quando il puntatore è nell'input */
     outline: none; /* tolgo il 'bordo' arancio */
 }
-
 .ok-button{
     border: none;
     background: none;

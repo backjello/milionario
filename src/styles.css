@@ -41,7 +41,7 @@ html, body{
     margin: 0;
     overflow: hidden;
 }
-.risposta button, .domanda, .aiuti button{
+.risposta button, .domanda, .aiuti button, .nuova-partita{
     color: white;
     width: 100%;
     border: var(--bordo-bianco);
