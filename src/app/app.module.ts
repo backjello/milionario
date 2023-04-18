@@ -11,8 +11,9 @@ import { Aiutopubblico2Component } from './components/aiutopubblico2/aiutopubbli
 import { Aiutodacasa2Component } from './components/aiutodacasa2/aiutodacasa2.component';
 import { ClassificaComponent } from './components/classifica/classifica.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule} from '@angular/material/dialog'
-
+import { MatDialogModule} from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,8 @@ import { MatDialogModule} from '@angular/material/dialog'
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    MatInputModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatDialogModule

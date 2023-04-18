@@ -4,6 +4,7 @@ import { Domanda } from './interfaces/domanda';
 import { Risposta } from './interfaces/risposta';
 import { MatDialog } from '@angular/material/dialog';
 import { ClassificaComponent } from './components/classifica/classifica.component';
+import { PREMI } from './components/punteggio/punteggio.component';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit{
   giausato5050 : boolean = false
   mostraPubblico: boolean = false;
   mostraCasa: boolean = false
+  // premi:number[] = PREMI
 
   constructor(private dialog:MatDialog){}
 
@@ -55,11 +57,14 @@ export class AppComponent implements OnInit{
 
   rispostaAccesa(corretta: boolean) {
     if(!corretta){
+      // il punteggio viene calcolato in base al livello
+      const PUNTEGGIO = PREMI[ 14 - this.livello] // es: livello 0 -> punteggio 50
       this.dialog.open(ClassificaComponent,{
         data:{
-          
+          punteggio:PUNTEGGIO
         },
-        width:'80%'
+        width:'80%',
+        disableClose:true
       })
     }
     else{

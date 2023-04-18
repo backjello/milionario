@@ -1,0 +1,7 @@
+.input-nome{
+    border: none; /* tolgo tutti i bordi */
+    border-bottom: 1px dotted black; /* metto il bordo sotto */
+}
+.input-nome:focus{ /* quando il puntatore è nell'input */
+    outline: none; /* tolgo il 'bordo' arancio */
+}
